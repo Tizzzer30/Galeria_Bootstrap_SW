@@ -18,6 +18,59 @@
         <h1 class="text-center">Star Wars Gallery</h1>
         <br><br>
         <div class="spotify-container">
+    <style>
+        body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0b0f17 0%, #151933 40%, #202a55 70%, #3b4f82 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+}
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.2em;
+  color: #ffe81f;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 5px #ffd700, 0 0 20px #ffcc00;
+  margin-top: 100px;
+  animation: crawl 10s linear infinite;
+}
+
+@keyframes crawl {
+  0% {
+    transform: perspective(500px) rotateX(25deg) translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(500px) rotateX(25deg) translateY(-200%);
+    opacity: 0;
+  }
+}
+.spotify-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spotify-frame {
+  opacity: 0.6; 
+  transition: opacity 0.4s ease-in-out;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 232, 31, 0.2); 
+}
+
+.spotify-frame:hover {
+  opacity: 0.9; 
+}
+
+    </style>
   <iframe 
     class="spotify-frame"
     src="https://open.spotify.com/embed/track/2bw4WgXyXP90hIex7ur58y?utm_source=generator&theme=0" 
